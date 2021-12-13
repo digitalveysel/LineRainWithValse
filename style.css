@@ -53,7 +53,7 @@ img {
     transform: translateY(-50vh);
   }
   100% {
-    transform: translateY(calc(150vh));
+    transform: translateY(150vh);
   }
 }
 
