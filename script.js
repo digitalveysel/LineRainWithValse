@@ -20,21 +20,21 @@ function rain() {
   }
 }
 
-let pause = false;
-function playValse() {
+let playPause = false;
+function playPauseValse() {
   const valse = document.querySelector("audio");
   if (!valse) return;
 
-  if (!pause) {
+  if (!playPause) {
     valse.play();
-    pause = true;
+    playPause = true;
   } else {
     valse.pause();
-    pause = false;
+    playPause = false;
   }
 }
 
 rain();
 
-const play = document.querySelector("#play");
-play.addEventListener("click", playValse);
+const logo = document.querySelector("#logo");
+logo.addEventListener("click", playPauseValse);
