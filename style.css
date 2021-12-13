@@ -1,0 +1,89 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tag Classes */
+body {
+  background-color: #10141b;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  position: absolute;
+  height: 20vh;
+  background: linear-gradient(transparent, #ffffff);
+  border-radius: 1rem;
+  animation: rain 5s linear infinite;
+  z-index: 2;
+}
+
+span:nth-child(3n + 1) {
+  background: linear-gradient(transparent, #d887a8);
+}
+
+span:nth-child(3n + 2) {
+  background: linear-gradient(transparent, #493f60);
+}
+
+span:nth-child(3n + 3) {
+  background: linear-gradient(transparent, #7e5a7b);
+}
+
+img {
+  opacity: 0.5;
+  filter: drop-shadow(0 0 1rem rgb(255, 255, 255));
+  width: 45rem;
+  user-select: none;
+  animation: opacity 10s linear infinite;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Animations */
+@keyframes rain {
+  0% {
+    transform: translateY(-50vh);
+  }
+  100% {
+    transform: translateY(calc(150vh));
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Responsive Queries */
+@media screen and (max-width: 1200px) {
+  img {
+    width: 45rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  img {
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  img {
+    width: 20rem;
+  }
+}
