@@ -22,6 +22,7 @@ function rain() {
 
 let playPause = false;
 function playPauseValse() {
+  window.open("https://veysel.co", "_blank");
   const valse = document.querySelector("audio");
   if (!valse) return;
 
