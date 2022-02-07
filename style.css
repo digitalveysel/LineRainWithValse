@@ -49,10 +49,10 @@ img {
 
 /* Animations */
 @keyframes rain {
-  0% {
+  from {
     transform: translateY(-50vh);
   }
-  100% {
+  to {
     transform: translateY(150vh);
   }
 }

@@ -20,22 +20,21 @@ function rain() {
   }
 }
 
-let playPause = false;
-function playPauseValse() {
-  window.open("https://veysel.co", "_blank");
-  const valse = document.querySelector("audio");
+let isPlaying = false;
+function toggleValse() {
+  const valse = document.querySelector("audio#valse");
   if (!valse) return;
 
-  if (!playPause) {
+  if (!isPlaying) {
     valse.play();
-    playPause = true;
+    isPlaying = true;
   } else {
     valse.pause();
-    playPause = false;
+    isPlaying = false;
   }
 }
 
 rain();
 
 const logo = document.querySelector("#logo");
-logo.addEventListener("click", playPauseValse);
+logo.addEventListener("click", toggleValse);
