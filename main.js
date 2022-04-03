@@ -22,19 +22,20 @@ function rain() {
 
 let isPlaying = false;
 function toggleValse() {
-  const valse = document.querySelector("audio#valse");
+  const valseAudio = document.querySelector("audio#valse");
   if (!valse) return;
 
   if (!isPlaying) {
-    valse.play();
+    valseAudio.play();
     isPlaying = true;
-  } else {
-    valse.pause();
-    isPlaying = false;
+    return;
   }
+
+  valseAudio.pause();
+  isPlaying = false;
 }
 
 rain();
 
-const logo = document.querySelector("#logo");
-logo.addEventListener("click", toggleValse);
+const logoElement = document.querySelector("#logo");
+logoElement.addEventListener("click", toggleValse);
