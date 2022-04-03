@@ -1,11 +1,11 @@
-/* Reset CSS */
+/* Universal */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Tag Classes */
+/* Classes */
 body {
   background-color: #10141b;
   overflow: hidden;
@@ -40,9 +40,9 @@ span:nth-child(3n + 3) {
 img {
   opacity: 0.5;
   filter: drop-shadow(0 0 1rem rgb(255, 255, 255));
-  width: 45rem;
+  width: 50vw;
   user-select: none;
-  animation: opacity 10s linear infinite;
+  animation: fade 10s linear infinite;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
@@ -57,33 +57,12 @@ img {
   }
 }
 
-@keyframes opacity {
-  0% {
+@keyframes fade {
+  0%,
+  100% {
     opacity: 0;
   }
   50% {
     opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-/* Responsive Queries */
-@media screen and (max-width: 1200px) {
-  img {
-    width: 45rem;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  img {
-    width: 30rem;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  img {
-    width: 20rem;
   }
 }
