@@ -23,7 +23,6 @@ function rain() {
 let isPlaying = false;
 function toggleValse() {
   const valseAudio = document.querySelector("audio#valse");
-  if (!valse) return;
 
   if (!isPlaying) {
     valseAudio.play();
